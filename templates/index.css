@@ -1,0 +1,252 @@
+/* -----------------------------------------------------
+   GLOBAL
+------------------------------------------------------*/
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+  color: #333;
+}
+
+/* -----------------------------------------------------
+   APP BAR
+------------------------------------------------------*/
+.appbar {
+  background: linear-gradient(90deg, #1976d2, #42a5f5);
+  padding: 25px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 15px;
+  margin-top: 3px;
+  opacity: 0.95;
+}
+
+/* -----------------------------------------------------
+   LAYOUT
+------------------------------------------------------*/
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* -----------------------------------------------------
+   CARDS
+------------------------------------------------------*/
+.card {
+  background: white;
+  width: 420px;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* -----------------------------------------------------
+   FLOATING BUTTONS
+------------------------------------------------------*/
+.fab {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.fab.primary {
+  background: linear-gradient(145deg, #42a5f5, #1e88e5);
+  color: white;
+  box-shadow: 0 6px 12px rgba(33,150,243,0.4);
+}
+
+.fab.danger {
+  background: linear-gradient(145deg, #ef5350, #d32f2f);
+  color: white;
+  box-shadow: 0 6px 12px rgba(244,67,54,0.4);
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+.fab:disabled {
+  opacity: 0.5;
+  transform: none;
+}
+
+/* -----------------------------------------------------
+   SELECT + BUTTONS
+------------------------------------------------------*/
+.options {
+  margin-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+.m-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #bbdefb;
+  font-size: 16px;
+  transition: 0.2s ease;
+  background: #e3f2fd;
+}
+
+.m-select:focus {
+  outline: none;
+  border-color: #42a5f5;
+  box-shadow: 0 0 6px rgba(66, 165, 245, 0.5);
+}
+
+/* Gender Buttons */
+.gender-container {
+  display: flex;
+  gap: 12px;
+}
+
+.m-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #f1f3f4;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.m-btn.active {
+  background: #42a5f5;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(66,165,245,0.5);
+}
+
+.m-btn.full-width {
+  margin-top: 12px;
+  width: 100%;
+  background: linear-gradient(90deg, #1976d2, #42a5f5);
+  color: white;
+  font-size: 17px;
+  padding: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.m-btn.full-width:hover {
+  transform: translateY(-2px);
+}
+
+.m-btn.full-width:disabled {
+  opacity: 0.5;
+  transform: none;
+}
+
+/* -----------------------------------------------------
+   RESULT BOX
+------------------------------------------------------*/
+.result-box {
+  margin-top: 10px;
+}
+
+.label {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+
+.m-output {
+  background: #f7f9fc;
+  border: 2px solid #c5cae9;
+  border-radius: 10px;
+  padding: 14px;
+  min-height: 55px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  transition: 0.25s ease;
+}
+
+.m-output:hover {
+  background: #e8eaf6;
+}
+
+/* -----------------------------------------------------
+   AUDIO PLAYER
+------------------------------------------------------*/
+.audio-player {
+  width: 100%;
+  margin-top: 18px;
+  border-radius: 10px;
+}
+
+/* -----------------------------------------------------
+   STATUS + PROGRESS
+------------------------------------------------------*/
+.status {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+}
+
+.progress {
+  width: 100%;
+  height: 12px;
+  margin-top: 12px;
+  background: #dfe3ee;
+  border-radius: 8px;
+}
+
+.progress-bar {
+  height: 12px;
+  width: 0%;
+  background: linear-gradient(90deg, #1976d2, #42a5f5);
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+/* -----------------------------------------------------
+   FOOTER
+------------------------------------------------------*/
+.footer {
+  margin-top: 25px;
+  padding: 18px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Material UI - Real-Time Speech Translator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('frontend', filename='style.css') }}">
+</head>
+
+<body>
+
+  <!-- Top App Bar -->
+  <header class="appbar">
+    <h1 class="title">🎧 Real-Time Speech Translator</h1>
+    <p class="subtitle">Material-Inspired Smart Voice Translator</p>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="container">
+
+    <!-- Left Panel -->
+    <section class="card left-card">
+
+      <h2 class="section-title">🎤 Voice Input</h2>
+
+      <!-- Mic FAB Button -->
+      <button id="startBtn" class="fab primary">🎙</button>
+      <button id="stopBtn" class="fab danger" disabled>⏹</button>
+
+      <div class="options">
+
+        <div class="input-group">
+          <label>Translate To</label>
+          <select id="liveLang" class="m-select">
+            {% for code, name in languages.items() %}
+            <option value="{{ code }}" {% if code=='hi' %}selected{% endif %}>{{ name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Voice Gender</label>
+          <div class="gender-container">
+            <button type="button" id="liveGenderMale" class="m-btn small active" data-gender="male">👨 Male</button>
+            <button type="button" id="liveGenderFemale" class="m-btn small" data-gender="female">👩 Female</button>
+          </div>
+        </div>
+
+        <button id="translateBtn" class="m-btn full-width" disabled>🔄 Translate</button>
+
+      </div>
+    </section>
+
+    <!-- Right Panel -->
+    <section class="card right-card">
+      <h2 class="section-title">📄 Translation Result</h2>
+
+      <div class="result-box">
+        <p class="label">Recognized Text</p>
+        <div id="liveText" class="m-output">...</div>
+
+        <p class="label">Translated Text</p>
+        <div id="translatedText" class="m-output">...</div>
+
+        <audio id="liveAudio" controls class="audio-player"></audio>
+
+        <div id="liveStatus" class="status"></div>
+
+        <div class="progress" id="liveProgress" style="display:none;">
+          <div class="progress-bar" id="liveProgressBar"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 — Material UI Speech Translator</p>
+  </footer>
+
+  <script src="{{ url_for('frontend', filename='script.js') }}"></script>
+</body>
+</html>
